@@ -4,7 +4,7 @@ project(libcarla-client)
 # 启用/安装 RSS VARIANT
 option (BUILD_RSS_VARIANT "Enables ad-rss-lib based RSS components" OFF)
 set(carla_target_postfix "")
-if (BUILD_RSS_VARIANT)
+if (BUILD_RSS_VARIANT)#如果BUILD_RSS_VARIANT这个预定义的变量为真，则执行下面的语句
   set(carla_target_postfix "_rss")
   set(ADRSS_INCLUDE_DIRS)
   set(ADRSS_LIBS)
