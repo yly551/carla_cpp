@@ -140,7 +140,7 @@ def get_libcarla_extensions():
         # the names listed in required_libs in it's file name
         libs = [x for x in os.listdir('dependencies/lib') if any(d in x for d in required_libs)]
 
-        for lib in libs:
+        for lib in libs:#lib是个可迭代对象，循环的目的是遍历lib中的每一个元素
             extra_link_args.append(os.path.join(pwd, 'dependencies/lib', lib))
 
         # https://docs.microsoft.com/es-es/cpp/porting/modifying-winver-and-win32-winnt
