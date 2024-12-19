@@ -1,12 +1,12 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-using System;
-using System.IO;
+using System;//引入System命名空间，提供基本的系统功能。
+using System.IO;//引入System.IO命名空间，用于处理文件和目录。
 using UnrealBuildTool;
 
-public class CarlaTools : ModuleRules
+public class CarlaTools : ModuleRules定义一个名为CarlaTools的公共类，继承自ModuleRules，用于定义模块的构建规则。
 {
-  bool bUsingOmniverseConnector = false;
+  bool bUsingOmniverseConnector = false;定义一个布尔类型的成员变量bUsingOmniverseConnector，初始值为false，可能用于标识是否使用Omniverse连接器。
   private bool IsWindows(ReadOnlyTargetRules Target)
   {
     return (Target.Platform == UnrealTargetPlatform.Win64) || (Target.Platform == UnrealTargetPlatform.Win32);
