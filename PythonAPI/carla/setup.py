@@ -173,7 +173,7 @@ def get_libcarla_extensions():
     return [make_extension('carla.libcarla', sources)]
 
 def get_license():
-    if is_rss_variant_enabled():
+    if is_rss_variant_enabled():#is_rss_variant_enabled#函数返回真，则RRS变体将启用
         return 'LGPL-v2.1-only License'
     return 'MIT License'
 
