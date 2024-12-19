@@ -112,7 +112,7 @@ class TestVehiclePhysicsControl(unittest.TestCase):
         self.assertTrue(abs(pc.center_of_mass.z - 1) <= error)
 
  # 验证方向盘转角与转向比的曲线的每个点
-        for i in range(0, len(steering_curve)):
+        for i in range(0, len(steering_curve)):#遍历(steering_curve)的每个元素
             self.assertTrue(abs(pc.steering_curve[i].x - steering_curve[i].x) <= error)
             self.assertTrue(abs(pc.steering_curve[i].y - steering_curve[i].y) <= error)
 
